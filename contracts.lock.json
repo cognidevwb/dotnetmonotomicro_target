@@ -1,0 +1,95 @@
+{
+  "consumers": [
+    {
+      "consumer_ctx": "orders-service",
+      "item": "Payment",
+      "path": "services/orders/Contracts/Payment.cs",
+      "provider_ctx": "payments-service"
+    }
+  ],
+  "providers": [
+    {
+      "hash": "f2262e4d866e5553",
+      "item": "Category",
+      "kind": "read-model",
+      "provider_ctx": "catalog-service",
+      "scalar_shape": [
+        "public int Id { get; set; }",
+        "public string Name { get; set; } = \"\";"
+      ]
+    },
+    {
+      "hash": "3ae95e0ad5051cdb",
+      "item": "Product",
+      "kind": "read-model",
+      "provider_ctx": "catalog-service",
+      "scalar_shape": [
+        "public decimal Price { get; set; }",
+        "public int CategoryId { get; set; }",
+        "public int Id { get; set; }",
+        "public string Name { get; set; } = \"\";"
+      ]
+    },
+    {
+      "hash": "fcced23165e14fa5",
+      "item": "Customer",
+      "kind": "read-model",
+      "provider_ctx": "customers-service",
+      "scalar_shape": [
+        "public bool Active { get; set; } = true;",
+        "public int Id { get; set; }",
+        "public string Email { get; set; } = \"\";"
+      ]
+    },
+    {
+      "hash": "86cdbc1655e75e71",
+      "item": "StockItem",
+      "kind": "read-model",
+      "provider_ctx": "inventory-service",
+      "scalar_shape": [
+        "public int Id { get; set; }",
+        "public int ProductId { get; set; }",
+        "public int Quantity { get; set; }"
+      ]
+    },
+    {
+      "hash": "fe346b01deef8075",
+      "item": "Order",
+      "kind": "read-model",
+      "provider_ctx": "orders-service",
+      "scalar_shape": [
+        "public decimal Total { get; set; }",
+        "public int CustomerId { get; set; }",
+        "public int Id { get; set; }",
+        "public string Status { get; set; } = \"new\";"
+      ]
+    },
+    {
+      "hash": "9a468ab047783bc9",
+      "item": "OrderLine",
+      "kind": "read-model",
+      "provider_ctx": "orders-service",
+      "scalar_shape": [
+        "public decimal UnitPrice { get; set; }",
+        "public int Id { get; set; }",
+        "public int OrderId { get; set; }",
+        "public int ProductId { get; set; }",
+        "public int Quantity { get; set; }"
+      ]
+    },
+    {
+      "hash": "42adfde17ca9f916",
+      "item": "Payment",
+      "kind": "read-model",
+      "provider_ctx": "payments-service",
+      "scalar_shape": [
+        "public decimal Amount { get; set; }",
+        "public int Id { get; set; }",
+        "public int OrderId { get; set; }",
+        "public string Status { get; set; } = \"pending\";   // NOTE: string status — enum seam"
+      ]
+    }
+  ],
+  "schema": 1,
+  "tool": "contracts-dotnet"
+}

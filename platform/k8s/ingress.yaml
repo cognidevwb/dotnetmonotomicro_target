@@ -1,0 +1,22 @@
+# The gateway is the single entry point; it routes to each service internally:
+#   /catalog/**  → catalog
+#   /customers/**  → customers
+#   /payments/**  → payments
+#   /orders/**  → orders
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: gateway
+  namespace: acmeplatform
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: gateway
+                port:
+                  number: 80

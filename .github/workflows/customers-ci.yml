@@ -1,0 +1,27 @@
+name: ci-customers
+
+# Path-filtered: customers only rebuilds on its own or shared-kernel changes.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'services/customers/**'
+      - 'ServiceDefaults/**'
+      - 'Contracts/**'
+      - 'Directory.Build.props'
+      - 'Directory.Packages.props'
+      - '.github/workflows/_service-ci.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'services/customers/**'
+      - 'ServiceDefaults/**'
+      - 'Contracts/**'
+
+jobs:
+  ci:
+    uses: ./.github/workflows/_service-ci.yml
+    with:
+      service: customers
+      project: Customers.csproj
+    secrets: inherit

@@ -1,0 +1,79 @@
+name: _service-ci
+
+# Reusable single-service pipeline: build → test → containerize → deploy. Called by
+# each services/<svc>-ci.yml (path-filtered) and re-usable after cutover splits the
+# service into its own repo.
+on:
+  workflow_call:
+    inputs:
+      service:
+        required: true
+        type: string
+      project:
+        # runnable project path relative to services/<service>/ — the one csproj
+        # (vertical-slice) or <Ctx>.Api/<Ctx>.Api.csproj (clean-hexagonal).
+        required: true
+        type: string
+
+permissions:
+  id-token: write        # azure/login OIDC
+  contents: read
+  security-events: write # scan SARIF
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+          cache: true
+          cache-dependency-path: '**/packages.lock.json'
+      - name: Format check
+        run: dotnet format services/${{ inputs.service }}/${{ inputs.project }} --verify-no-changes || true
+      - name: Build
+        run: dotnet build services/${{ inputs.service }}/${{ inputs.project }} -c Release
+      - name: Test (Testcontainers — Docker is preinstalled on the runner)
+        run: dotnet test services/${{ inputs.service }}.Tests -c Release --logger trx --collect "XPlat Code Coverage"
+      - name: Vulnerable dependency scan
+        run: dotnet list services/${{ inputs.service }}/${{ inputs.project }} package --vulnerable --include-transitive
+
+  deploy:
+    needs: build-test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+      - name: Azure login (OIDC — no secrets)
+        uses: azure/login@v3
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      - name: ACR login
+        run: az acr login --name ${{ vars.ACR_NAME }}
+      # .NET 10 SDK containers — no Dockerfile needed; chiseled non-root base.
+      - name: Publish container to ACR
+        run: >
+          dotnet publish services/${{ inputs.service }}/${{ inputs.project }}
+          -c Release --os linux --arch x64 -t:PublishContainer
+          -p ContainerRegistry=${{ vars.ACR_LOGIN_SERVER }}
+          -p ContainerRepository=${{ inputs.service }}
+          -p ContainerImageTags='"${{ github.sha }};latest"'
+          -p ContainerFamily=noble-chiseled
+      - name: Generate SBOM (CycloneDX)
+        run: |
+          dotnet tool install --global CycloneDX
+          dotnet CycloneDX services/${{ inputs.service }}/${{ inputs.project }} -o ./sbom -fn ${{ inputs.service }}.cdx.json -j
+      - name: Deploy to Azure Container Apps
+        uses: azure/container-apps-deploy-action@v2
+        with:
+          acrName: ${{ vars.ACR_NAME }}
+          containerAppName: ${{ inputs.service }}
+          resourceGroup: ${{ vars.ACA_RESOURCE_GROUP }}
+          containerAppEnvironment: ${{ vars.ACA_ENVIRONMENT }}
+          imageToDeploy: ${{ vars.ACR_LOGIN_SERVER }}/${{ inputs.service }}:${{ github.sha }}

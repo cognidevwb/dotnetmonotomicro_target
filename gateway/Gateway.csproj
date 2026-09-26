@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsFrameworkProject>true</IsFrameworkProject>
+    <!-- The Web SDK's global usings carry the extension methods Program.cs calls
+         (AddReverseProxy / AddAuthentication / AddJwtBearer live in
+         Microsoft.Extensions.DependencyInjection; UseAuthentication / MapReverseProxy
+         in Microsoft.AspNetCore.Builder). Without this they don't resolve. -->
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../ServiceDefaults/ServiceDefaults.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Yarp.ReverseProxy" />
+    <PackageReference Include="Microsoft.Extensions.ServiceDiscovery.Yarp" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+  </ItemGroup>
+</Project>

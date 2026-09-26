@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/payments/charge",
+    "body": { "orderId": 0, "amount": 10 }
+  },
+  "seed": null,
+  "expectedResponse": {
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "errors": {
+      "OrderId": ["OrderId must be a positive order reference."]
+    }
+  }
+}

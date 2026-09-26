@@ -1,0 +1,20 @@
+# Strangler-fig cutover posture for the customers context.
+# The gateway sends this percentage of customers traffic to the NEW service; the rest
+# stays on the legacy monolith. Start at 0 (dark launch) and raise as confidence
+# grows. Runbook: services/customers/deploy/README.md.
+strangler:
+  customers:
+    # Customers is a leaf context: it owns Customer outright, calls no other service,
+    # and publishes no cross-context commands (see Program.cs) — orders only *reads*
+    # it via the /{id}/active probe. Nothing here is dual-written, so rollback is a
+    # weight change with no data reconciliation. Hence a majority slice rather than a
+    # canary; raise to 100 once customersdb is fully migrated off the monolith.
+    weight: 50
+    # request paths that MUST keep hitting the monolith during cutover.
+    # The new service reimplements every customers route the monolith served
+    # (GET /customers/{id}, plus the new activity probe and writes), so the only
+    # thing pinned back is the legacy CUST_* bulk export, which still reads the
+    # monolith's schema directly (see Acl/CustomersLegacyAcl.cs).
+    legacyPaths:
+      - /customers/export
+      - /customers/legacy/*

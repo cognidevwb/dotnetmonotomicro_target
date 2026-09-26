@@ -1,0 +1,16 @@
+# Strangler-fig cutover posture for the payments context.
+# The gateway sends this percentage of payments traffic to the NEW service; the rest
+# stays on the legacy monolith. Start at 0 (dark launch) and raise as confidence
+# grows. Runbook: services/payments/deploy/README.md.
+strangler:
+  payments:
+    # payments is the money-taking participant of the order saga — the hardest step to
+    # reverse — so it cuts over as a narrow canary, not a bulk shift, even though it owns
+    # its data outright and makes no cross-context calls.
+    weight: 5
+    legacyPaths:   # request paths that MUST keep hitting the monolith during cutover
+      # Refunds are part of the payment lifecycle (PaymentStatus.Refunded) but the new
+      # service exposes no refund endpoint yet — the monolith stays authoritative.
+      - /payments/refund
+      # Reporting/settlement reads still join monolith tables the new schema does not own.
+      - /payments/reports

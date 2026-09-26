@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <!-- ImplicitUsings brings System / System.Linq / System.Collections.Generic /
+         System.Net.Http / System.Threading.Tasks so the contract + equivalence harness
+         (_support/*.cs) compiles without a wall of usings. -->
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!-- Test projects run assertion frameworks; don't fail them on style warnings. -->
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+    <PackageReference Include="NetArchTest.eNhancedEdition" />
+    <PackageReference Include="Testcontainers.PostgreSql" />
+    <PackageReference Include="Npgsql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../customers/Customers.csproj" />
+  </ItemGroup>
+  <!-- Recorded contract + golden-master fixtures must reach the test output dir so
+       ContractBoundaries.Fixtures(...) and GoldenReplay can read them at runtime. -->
+  <ItemGroup>
+    <None Include="Contracts/fixtures/**/*.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Equivalence/fixtures/**/*.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

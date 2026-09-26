@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+#
+# Azure deployment. The recommended 2026 path is the Aspire CLI:
+#   aspire deploy                 # provision Azure Container Apps + ACR + push + deploy
+#   aspire publish -o ./artifacts # emit Bicep/Helm for a separate apply
+# This azure.yaml keeps `azd up` / `azd provision` / `azd deploy` working too —
+# infra is derived from the AppHost's AddAzureContainerAppEnvironment declaration.
+name: acmeplatform
+services:
+  app:
+    language: dotnet
+    project: ./AppHost/AppHost.csproj
+    host: containerapp

@@ -1,0 +1,15 @@
+# Deploy config for the payments service. The CI workflow wires build, test, the
+# container publish, the registry (repo var ACR_LOGIN_SERVER) and the resource group —
+# you do NOT set those here. The develop step fills the two fields below.
+service: payments
+image_repository: payments
+container_app_name: payments
+# payments takes money — the hardest step to reverse — so production always sits behind a
+# manual approval gate, never an auto-promote.
+environments:
+  - name: staging
+  - name: production
+    requiresApproval: true
+# Readiness route wired by ServiceDefaults' MapDefaultEndpoints() (see Program.cs) and used
+# by the k8s readinessProbe.
+smoke_check_path: /health

@@ -1,0 +1,16 @@
+# Strangler-fig cutover posture for the catalog context.
+# The gateway sends this percentage of catalog traffic to the NEW service; the rest
+# stays on the legacy monolith. Start at 0 (dark launch) and raise as confidence
+# grows. Runbook: services/catalog/deploy/README.md.
+strangler:
+  catalog:
+    # catalog is a leaf context — it calls no other service (no typed clients in
+    # Program.cs); other contexts call in. Reads (products/categories/price) are
+    # idempotent and safe to shift in bulk, so start at a substantial slice rather
+    # than a canary.
+    weight: 50
+    legacyPaths:
+      # Stock reservation is the one write other contexts depend on (orders' saga
+      # decrements through here). Keep it dual-served on the monolith until the new
+      # guarded-UPDATE path is proven under production concurrency.
+      - /catalog/stock/reservations

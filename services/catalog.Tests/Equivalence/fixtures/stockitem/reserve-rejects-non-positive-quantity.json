@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/catalog/stock/reservations",
+    "body": { "productId": 1, "quantity": 0 }
+  },
+  "seed": null,
+  "expectedResponse": {
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "errors": {
+      "Quantity": ["'Quantity' must be greater than '0'."]
+    }
+  }
+}

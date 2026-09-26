@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/catalog/products/",
+    "body": { "name": "", "price": 10, "categoryId": 1 }
+  },
+  "seed": null,
+  "expectedResponse": {
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "errors": {
+      "Name": ["'Name' must not be empty."]
+    }
+  }
+}

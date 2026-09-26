@@ -1,0 +1,17 @@
+**/bin/
+**/obj/
+**/.vs/
+**/.vscode/
+**/.idea/
+**/*.user
+**/.git/
+**/.gitignore
+**/.dockerignore
+**/Dockerfile*
+**/docker-compose*
+**/node_modules/
+**/.env
+**/TestResults/
+**/.github/
+**/.cognidev/
+LICENSE

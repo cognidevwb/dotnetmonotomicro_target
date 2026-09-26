@@ -1,0 +1,13 @@
+<Solution>
+  <Project Path="ServiceDefaults/ServiceDefaults.csproj" />
+  <Project Path="AppHost/AppHost.csproj" />
+  <Project Path="gateway/Gateway.csproj" />
+  <Project Path="services/catalog/Catalog.csproj" />
+  <Project Path="services/catalog.Tests/Catalog.Tests.csproj" />
+  <Project Path="services/customers/Customers.csproj" />
+  <Project Path="services/customers.Tests/Customers.Tests.csproj" />
+  <Project Path="services/payments/Payments.csproj" />
+  <Project Path="services/payments.Tests/Payments.Tests.csproj" />
+  <Project Path="services/orders/Orders.csproj" />
+  <Project Path="services/orders.Tests/Orders.Tests.csproj" />
+</Solution>

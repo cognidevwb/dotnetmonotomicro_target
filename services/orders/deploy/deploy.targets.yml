@@ -1,0 +1,14 @@
+# Deploy config for the orders service. The CI workflow wires build, test, the
+# container publish, the registry (repo var ACR_LOGIN_SERVER) and the resource group —
+# you do NOT set those here. The develop step fills the two fields below.
+service: orders
+image_repository: orders
+container_app_name: orders
+# orders fronts HTTP traffic (POST/GET /orders) *and* orchestrates the CreateOrder
+# saga, so production stays behind a manual approval gate: a bad rollout here can
+# strand in-flight sagas mid-compensation.
+environments:
+  - name: staging
+  - name: production
+    requiresApproval: true
+smoke_check_path: /health

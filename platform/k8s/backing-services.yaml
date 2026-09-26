@@ -1,0 +1,341 @@
+# Dev-grade backing services for the `acmeplatform` namespace. NOT for production —
+# `emptyDir` storage is ephemeral. In prod use a managed PostgreSQL / a managed broker
+# / Grafana Cloud and delete this file.
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: catalog-db
+  namespace: acmeplatform
+  labels:
+    app: catalog-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: catalog-db
+  template:
+    metadata:
+      labels:
+        app: catalog-db
+    spec:
+      containers:
+        - name: db
+          image: postgres:17
+          env:
+            - name: POSTGRES_DB
+              value: "catalogdb"
+            - name: POSTGRES_USER
+              value: "postgres"
+            - name: POSTGRES_PASSWORD
+              value: "postgres"
+          ports:
+            - containerPort: 5432
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/postgresql/data
+      volumes:
+        - name: data
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: catalog-db
+  namespace: acmeplatform
+spec:
+  selector:
+    app: catalog-db
+  ports:
+    - port: 5432
+      targetPort: 5432
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customers-db
+  namespace: acmeplatform
+  labels:
+    app: customers-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: customers-db
+  template:
+    metadata:
+      labels:
+        app: customers-db
+    spec:
+      containers:
+        - name: db
+          image: postgres:17
+          env:
+            - name: POSTGRES_DB
+              value: "customersdb"
+            - name: POSTGRES_USER
+              value: "postgres"
+            - name: POSTGRES_PASSWORD
+              value: "postgres"
+          ports:
+            - containerPort: 5432
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/postgresql/data
+      volumes:
+        - name: data
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: customers-db
+  namespace: acmeplatform
+spec:
+  selector:
+    app: customers-db
+  ports:
+    - port: 5432
+      targetPort: 5432
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payments-db
+  namespace: acmeplatform
+  labels:
+    app: payments-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: payments-db
+  template:
+    metadata:
+      labels:
+        app: payments-db
+    spec:
+      containers:
+        - name: db
+          image: postgres:17
+          env:
+            - name: POSTGRES_DB
+              value: "paymentsdb"
+            - name: POSTGRES_USER
+              value: "postgres"
+            - name: POSTGRES_PASSWORD
+              value: "postgres"
+          ports:
+            - containerPort: 5432
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/postgresql/data
+      volumes:
+        - name: data
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: payments-db
+  namespace: acmeplatform
+spec:
+  selector:
+    app: payments-db
+  ports:
+    - port: 5432
+      targetPort: 5432
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orders-db
+  namespace: acmeplatform
+  labels:
+    app: orders-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: orders-db
+  template:
+    metadata:
+      labels:
+        app: orders-db
+    spec:
+      containers:
+        - name: db
+          image: postgres:17
+          env:
+            - name: POSTGRES_DB
+              value: "ordersdb"
+            - name: POSTGRES_USER
+              value: "postgres"
+            - name: POSTGRES_PASSWORD
+              value: "postgres"
+          ports:
+            - containerPort: 5432
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/postgresql/data
+      volumes:
+        - name: data
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: orders-db
+  namespace: acmeplatform
+spec:
+  selector:
+    app: orders-db
+  ports:
+    - port: 5432
+      targetPort: 5432
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rabbitmq
+  namespace: acmeplatform
+  labels:
+    app: rabbitmq
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rabbitmq
+  template:
+    metadata:
+      labels:
+        app: rabbitmq
+    spec:
+      containers:
+        - name: rabbitmq
+          image: rabbitmq:4-management
+          ports:
+            - containerPort: 5672
+            - containerPort: 15672
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rabbitmq
+  namespace: acmeplatform
+spec:
+  selector:
+    app: rabbitmq
+  ports:
+    - name: amqp
+      port: 5672
+      targetPort: 5672
+    - name: management
+      port: 15672
+      targetPort: 15672
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: otel-collector-config
+  namespace: acmeplatform
+data:
+  otel-collector-config.yaml: |
+    receivers:
+      otlp:
+        protocols:
+          grpc: { endpoint: 0.0.0.0:4317 }
+          http: { endpoint: 0.0.0.0:4318 }
+    processors:
+      batch: {}
+    exporters:
+      debug: { verbosity: normal }
+    service:
+      pipelines:
+        traces:  { receivers: [otlp], processors: [batch], exporters: [debug] }
+        metrics: { receivers: [otlp], processors: [batch], exporters: [debug] }
+        logs:    { receivers: [otlp], processors: [batch], exporters: [debug] }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: otel-collector
+  namespace: acmeplatform
+  labels:
+    app: otel-collector
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: otel-collector
+  template:
+    metadata:
+      labels:
+        app: otel-collector
+    spec:
+      containers:
+        - name: otel-collector
+          image: otel/opentelemetry-collector-contrib:latest
+          args: ["--config=/etc/otel/otel-collector-config.yaml"]
+          ports:
+            - containerPort: 4317
+            - containerPort: 4318
+          volumeMounts:
+            - name: config
+              mountPath: /etc/otel
+      volumes:
+        - name: config
+          configMap:
+            name: otel-collector-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: otel-collector
+  namespace: acmeplatform
+spec:
+  selector:
+    app: otel-collector
+  ports:
+    - name: grpc
+      port: 4317
+      targetPort: 4317
+    - name: http
+      port: 4318
+      targetPort: 4318
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grafana-lgtm
+  namespace: acmeplatform
+  labels:
+    app: grafana-lgtm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grafana-lgtm
+  template:
+    metadata:
+      labels:
+        app: grafana-lgtm
+    spec:
+      containers:
+        - name: grafana-lgtm
+          image: grafana/otel-lgtm:latest
+          ports:
+            - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana-lgtm
+  namespace: acmeplatform
+spec:
+  selector:
+    app: grafana-lgtm
+  ports:
+    - name: grafana
+      port: 3000
+      targetPort: 3000

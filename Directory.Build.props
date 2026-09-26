@@ -1,0 +1,48 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Analyzers stay ON as SIGNAL (warnings), but they do NOT break the build.
+         This is AI-GENERATED, iteratively-compiled code: gating generation on
+         pedantic style rules (Meziantou MA*, code-style CA*, e.g. ConfigureAwait,
+         one-type-per-file, method-length) makes the develop loop fight style
+         instead of correctness — it can never converge, because the real lever
+         is THIS file, which the loop doesn't edit. So the build gates on REAL
+         compilation (CS*/error-severity analyzers) only; style shows as warnings. -->
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <AnalysisMode>Recommended</AnalysisMode>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+
+    <!-- Warnings are NOT errors for generated services — see above. A real
+         error-severity analyzer still fails; a warning-severity style rule does not. -->
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <!-- CS1591 (missing XML doc) off — these are services, not published libraries -->
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+
+    <!-- Supply-chain: audit direct + transitive on every restore -->
+    <NuGetAudit>true</NuGetAudit>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <NuGetAuditLevel>low</NuGetAuditLevel>
+
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+
+  <!-- CI-only: reproducible builds with normalized source paths -->
+  <PropertyGroup Condition="'$(TF_BUILD)' == 'true' or '$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <!-- Strict third-party analyzers on BUSINESS code only. Framework glue
+       (ServiceDefaults, AppHost, gateway) and test projects set
+       IsFrameworkProject/IsTestProject and opt out — the built-in .NET analyzers
+       still apply everywhere. -->
+  <ItemGroup Condition="'$(IsFrameworkProject)' != 'true' and '$(IsTestProject)' != 'true'">
+    <PackageReference Include="Meziantou.Analyzer">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>

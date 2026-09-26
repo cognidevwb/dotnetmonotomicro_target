@@ -1,0 +1,13 @@
+# Deploy config for the catalog service. The CI workflow wires build, test, the
+# container publish, the registry (repo var ACR_LOGIN_SERVER) and the resource group —
+# you do NOT set those here. The develop step fills the two fields below.
+service: catalog
+image_repository: catalog
+container_app_name: catalog
+# catalog is an edge HTTP service (products/categories/stock read by the gateway and by
+# orders' typed client), so it smokes on its readiness route and promotes staging -> production.
+environments:
+  - name: staging
+  - name: production
+    requiresApproval: true
+smoke_check_path: /health

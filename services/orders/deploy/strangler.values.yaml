@@ -1,0 +1,16 @@
+# Strangler-fig cutover posture for the orders context.
+# The gateway sends this percentage of orders traffic to the NEW service; the rest
+# stays on the legacy monolith. Start at 0 (dark launch) and raise as confidence
+# grows. Runbook: services/orders/deploy/README.md.
+strangler:
+  orders:
+    # orders is the hub of this decomposition: it fans out to catalog, customers,
+    # inventory and payments and orchestrates the CreateOrder saga, so a cutover
+    # here exercises four remote hops plus compensations. Canary low until the
+    # saga has been observed compensating correctly under real traffic.
+    weight: 5
+    legacyPaths:
+      # Order history/reporting reads are not served by the new service yet — the
+      # ported surface is POST /orders and GET /orders/{id} only.
+      - /orders/reports
+      - /orders/history

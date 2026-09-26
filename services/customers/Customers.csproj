@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <!-- ImplicitUsings brings in the Web SDK's global usings — crucially
+         Microsoft.AspNetCore.Builder/Http/Routing, which carry the Minimal API
+         `MapGet/MapPost(this IEndpointRouteBuilder, string, Delegate)` overloads.
+         Without it the compiler only sees the legacy `RequestDelegate` overload,
+         so every multi-arg endpoint lambda the develop step writes fails with
+         CS1593 ("RequestDelegate does not take N arguments") — an error that
+         points at the endpoint LINE, so an LLM fixer rewrites the (correct)
+         lambda forever instead of the project file. Nullable matches the modern
+         template default the generated code is written against. -->
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../ServiceDefaults/ServiceDefaults.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" />
+    <PackageReference Include="WolverineFx.Http" />
+    <PackageReference Include="WolverineFx.EntityFrameworkCore" />
+    <PackageReference Include="WolverineFx.RuntimeCompilation" />
+    <PackageReference Include="WolverineFx.Postgresql" />
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <PackageReference Include="WolverineFx.RabbitMQ" />
+  </ItemGroup>
+  <!-- Global usings for the target stack the develop step writes against. It emits
+       extension-method calls (UseWolverine, AddValidatorsFromAssemblyContaining,
+       UseNpgsql, the EF Core outbox APIs) whose namespaces the model otherwise has
+       to import by hand — forgetting ONE is a per-service compile break
+       (CS1061/CS1929) and a wasted refine round. Making them global removes that
+       whole class at the source. Services only — gateway/AppHost don't reference
+       these packages, so this can't sit in the shared Directory.Build.props. -->
+  <ItemGroup>
+    <Using Include="Wolverine" />
+    <Using Include="Wolverine.EntityFrameworkCore" />
+    <Using Include="FluentValidation" />
+    <Using Include="Microsoft.EntityFrameworkCore" />
+  </ItemGroup>
+</Project>

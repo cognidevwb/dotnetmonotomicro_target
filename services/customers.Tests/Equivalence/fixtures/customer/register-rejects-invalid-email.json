@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/customers/",
+    "body": { "email": "not-an-email", "active": true }
+  },
+  "seed": null,
+  "expectedResponse": {
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "errors": {
+      "Email": ["Email must be a valid address."]
+    }
+  }
+}

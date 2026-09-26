@@ -1,0 +1,22 @@
+name: solution-ci
+
+# Whole-solution integration build+test — the cross-service signal the per-service
+# path-filtered pipelines individually cannot give.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-test-all:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+      - name: Build (whole solution)
+        run: dotnet build -c Release
+      - name: Test (whole solution)
+        run: dotnet test -c Release --logger trx

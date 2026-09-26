@@ -1,0 +1,10 @@
+bin/
+obj/
+*.user
+.vs/
+.idea/
+[Dd]ebug/
+[Rr]elease/
+artifacts/
+*.received.*
+.cognidev/
