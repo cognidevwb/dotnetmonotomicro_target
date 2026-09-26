@@ -1,0 +1,19 @@
+{
+  "routes": [
+    {
+      "handler": "CatalogController.Get",
+      "method": "GET",
+      "path": "products/{id:int}"
+    },
+    {
+      "handler": "CustomersController.Get",
+      "method": "GET",
+      "path": "{id:int}"
+    },
+    {
+      "handler": "OrdersController.Place",
+      "method": "POST",
+      "path": "/Place"
+    }
+  ]
+}

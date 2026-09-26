@@ -1,0 +1,3662 @@
+[
+  {
+    "loc": 92,
+    "path": "ServiceDefaults/Extensions.cs",
+    "symbols": [
+      {
+        "class": "Extensions",
+        "kind": "method",
+        "line": 84,
+        "name": "AddDefaultHealthChecks"
+      },
+      {
+        "class": "Extensions",
+        "kind": "method",
+        "line": 62,
+        "name": "AddOpenTelemetryExporters"
+      },
+      {
+        "class": "Extensions",
+        "kind": "method",
+        "line": 18,
+        "name": "AddServiceDefaults"
+      },
+      {
+        "class": "Extensions",
+        "kind": "method",
+        "line": 32,
+        "name": "ConfigureOpenTelemetry"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 16,
+        "name": "Extensions"
+      },
+      {
+        "class": "Extensions",
+        "kind": "method",
+        "line": 92,
+        "name": "MapDefaultEndpoints"
+      }
+    ]
+  },
+  {
+    "loc": 12,
+    "path": "services/catalog.Tests/ArchitectureTests.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 8,
+        "name": "ArchitectureTests"
+      },
+      {
+        "class": "ArchitectureTests",
+        "kind": "method",
+        "line": 12,
+        "name": "Domain_has_no_dependency_on_Infrastructure_or_messaging"
+      },
+      {
+        "class": "ArchitectureTests",
+        "kind": "field",
+        "line": 10,
+        "name": "Service"
+      }
+    ]
+  },
+  {
+    "loc": 139,
+    "path": "services/catalog.Tests/CategoryTests.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 18,
+        "name": "CatalogApp"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 68,
+        "name": "CatalogCollection"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 75,
+        "name": "CatalogJson"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 80,
+        "name": "CategoryTests"
+      },
+      {
+        "class": "CatalogApp",
+        "kind": "field",
+        "line": 50,
+        "name": "Client"
+      },
+      {
+        "class": "CategoryTests",
+        "kind": "method",
+        "line": 83,
+        "name": "Create_then_get_round_trips_the_category"
+      },
+      {
+        "class": "CategoryTests",
+        "kind": "method",
+        "line": 117,
+        "name": "Create_with_blank_name_is_rejected"
+      },
+      {
+        "class": "CategoryTests",
+        "kind": "method",
+        "line": 128,
+        "name": "Create_with_overlong_name_is_rejected"
+      },
+      {
+        "class": "CatalogApp",
+        "kind": "method",
+        "line": 57,
+        "name": "DisposeAsync"
+      },
+      {
+        "class": "CategoryTests",
+        "kind": "method",
+        "line": 139,
+        "name": "Get_unknown_category_is_not_found"
+      },
+      {
+        "class": "CatalogApp",
+        "kind": "method",
+        "line": 26,
+        "name": "InitializeAsync"
+      },
+      {
+        "class": "CategoryTests",
+        "kind": "method",
+        "line": 102,
+        "name": "List_includes_a_created_category"
+      },
+      {
+        "class": "CatalogCollection",
+        "kind": "field",
+        "line": 71,
+        "name": "Name"
+      },
+      {
+        "class": "CatalogApp",
+        "kind": "method",
+        "line": 52,
+        "name": "NewDbContext"
+      },
+      {
+        "class": "CatalogApp",
+        "kind": "field",
+        "line": 24,
+        "name": "Unavailable"
+      },
+      {
+        "class": "CatalogJson",
+        "kind": "field",
+        "line": 77,
+        "name": "Web"
+      },
+      {
+        "class": "CatalogApp",
+        "kind": "field",
+        "line": 20,
+        "name": "_db"
+      },
+      {
+        "class": "CatalogApp",
+        "kind": "field",
+        "line": 21,
+        "name": "_factory"
+      }
+    ]
+  },
+  {
+    "loc": 94,
+    "path": "services/catalog.Tests/Equivalence/CatalogEquivalenceTests.cs",
+    "symbols": [
+      {
+        "class": "GoldenFixtures",
+        "kind": "method",
+        "line": 69,
+        "name": "All"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 15,
+        "name": "CatalogEquivalenceTests"
+      },
+      {
+        "class": "CatalogEquivalenceTests",
+        "kind": "method",
+        "line": 33,
+        "name": "DisposeAsync"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "method",
+        "line": 85,
+        "name": "ExpectedStatus"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 62,
+        "name": "GoldenFixtures"
+      },
+      {
+        "class": "CatalogEquivalenceTests",
+        "kind": "method",
+        "line": 41,
+        "name": "Goldens"
+      },
+      {
+        "class": "CatalogEquivalenceTests",
+        "kind": "method",
+        "line": 20,
+        "name": "InitializeAsync"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "method",
+        "line": 79,
+        "name": "Load"
+      },
+      {
+        "class": "CatalogEquivalenceTests",
+        "kind": "method",
+        "line": 43,
+        "name": "New_service_matches_the_legacy_golden"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "method",
+        "line": 94,
+        "name": "ProjectOnto"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "field",
+        "line": 65,
+        "name": "Volatile"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "field",
+        "line": 67,
+        "name": "Web"
+      },
+      {
+        "class": "CatalogEquivalenceTests",
+        "kind": "field",
+        "line": 17,
+        "name": "_replay"
+      },
+      {
+        "class": "CatalogEquivalenceTests",
+        "kind": "field",
+        "line": 18,
+        "name": "_unavailable"
+      }
+    ]
+  },
+  {
+    "loc": 15,
+    "path": "services/catalog.Tests/HealthTests.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 12,
+        "name": "HealthTests"
+      },
+      {
+        "class": "HealthTests",
+        "kind": "method",
+        "line": 15,
+        "name": "Health_endpoint_reports_healthy"
+      }
+    ]
+  },
+  {
+    "loc": 110,
+    "path": "services/catalog.Tests/ProductTests.cs",
+    "symbols": [
+      {
+        "class": "ProductTests",
+        "kind": "method",
+        "line": 110,
+        "name": "CreateCategory"
+      },
+      {
+        "class": "ProductTests",
+        "kind": "method",
+        "line": 13,
+        "name": "Create_then_get_round_trips_the_product"
+      },
+      {
+        "class": "ProductTests",
+        "kind": "method",
+        "line": 90,
+        "name": "Create_under_an_unknown_category_is_unprocessable"
+      },
+      {
+        "class": "ProductTests",
+        "kind": "method",
+        "line": 74,
+        "name": "Create_with_an_invalid_request_is_rejected"
+      },
+      {
+        "class": "ProductTests",
+        "kind": "method",
+        "line": 101,
+        "name": "Get_unknown_product_is_not_found"
+      },
+      {
+        "class": "ProductTests",
+        "kind": "method",
+        "line": 55,
+        "name": "List_filters_by_category"
+      },
+      {
+        "class": "ProductTests",
+        "kind": "method",
+        "line": 36,
+        "name": "Price_route_returns_the_products_price"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 10,
+        "name": "ProductTests"
+      }
+    ]
+  },
+  {
+    "loc": 138,
+    "path": "services/catalog.Tests/StockItemTests.cs",
+    "symbols": [
+      {
+        "class": "StockItemTests",
+        "kind": "method",
+        "line": 94,
+        "name": "Concurrent_reservations_cannot_oversell"
+      },
+      {
+        "class": "StockItemTests",
+        "kind": "method",
+        "line": 17,
+        "name": "Get_returns_the_seeded_stock_item"
+      },
+      {
+        "class": "StockItemTests",
+        "kind": "method",
+        "line": 33,
+        "name": "Reserve_decrements_the_quantity"
+      },
+      {
+        "class": "StockItemTests",
+        "kind": "method",
+        "line": 80,
+        "name": "Reserving_a_discontinued_item_is_a_conflict"
+      },
+      {
+        "class": "StockItemTests",
+        "kind": "method",
+        "line": 112,
+        "name": "Reserving_a_non_positive_quantity_is_rejected"
+      },
+      {
+        "class": "StockItemTests",
+        "kind": "method",
+        "line": 63,
+        "name": "Reserving_more_than_is_held_is_a_conflict"
+      },
+      {
+        "class": "StockItemTests",
+        "kind": "method",
+        "line": 49,
+        "name": "Reserving_the_last_unit_marks_the_item_out_of_stock"
+      },
+      {
+        "class": "StockItemTests",
+        "kind": "method",
+        "line": 138,
+        "name": "Seed"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 10,
+        "name": "StockItemTests"
+      },
+      {
+        "class": "StockItemTests",
+        "kind": "method",
+        "line": 126,
+        "name": "Stock_for_an_unknown_product_is_not_found"
+      },
+      {
+        "class": "StockItemTests",
+        "kind": "field",
+        "line": 15,
+        "name": "_nextProductId"
+      }
+    ]
+  },
+  {
+    "loc": 40,
+    "path": "services/catalog.Tests/_support/GoldenReplay.cs",
+    "symbols": [
+      {
+        "class": "GoldenReplay",
+        "kind": "field",
+        "line": 28,
+        "name": "Client"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "method",
+        "line": 40,
+        "name": "DisposeAsync"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 9,
+        "name": "GoldenCase"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 16,
+        "name": "GoldenReplay"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 10,
+        "name": "GoldenRequest"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "method",
+        "line": 30,
+        "name": "Replay"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "method",
+        "line": 21,
+        "name": "StartAsync"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "field",
+        "line": 18,
+        "name": "_db"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "field",
+        "line": 19,
+        "name": "_factory"
+      }
+    ]
+  },
+  {
+    "loc": 21,
+    "path": "services/catalog.Tests/_support/JsonNormalize.cs",
+    "symbols": [
+      {
+        "class": "JsonNormalize",
+        "kind": "method",
+        "line": 14,
+        "name": "Canonical"
+      },
+      {
+        "class": "JsonNormalize",
+        "kind": "field",
+        "line": 11,
+        "name": "DefaultVolatile"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 9,
+        "name": "JsonNormalize"
+      },
+      {
+        "class": "JsonNormalize",
+        "kind": "method",
+        "line": 21,
+        "name": "Rewrite"
+      }
+    ]
+  },
+  {
+    "loc": 39,
+    "path": "services/catalog.Tests/_support/SchemaGuard.cs",
+    "symbols": [
+      {
+        "class": "SchemaGuard",
+        "kind": "method",
+        "line": 13,
+        "name": "AssertResponseSatisfies"
+      },
+      {
+        "class": "SchemaGuard",
+        "kind": "method",
+        "line": 39,
+        "name": "KindCompatible"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 11,
+        "name": "SchemaGuard"
+      },
+      {
+        "class": "SchemaGuard",
+        "kind": "method",
+        "line": 32,
+        "name": "TryGet"
+      }
+    ]
+  },
+  {
+    "loc": 98,
+    "path": "services/catalog/Acl/CatalogLegacyAcl.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 7,
+        "name": "CatalogLegacyAcl"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 17,
+        "name": "LegacyCategoryRow"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 19,
+        "name": "LegacyProductRow"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 21,
+        "name": "LegacyStockRow"
+      },
+      {
+        "class": "CatalogLegacyAcl",
+        "kind": "method",
+        "line": 23,
+        "name": "ToCategory"
+      },
+      {
+        "class": "CatalogLegacyAcl",
+        "kind": "method",
+        "line": 38,
+        "name": "ToProduct"
+      },
+      {
+        "class": "CatalogLegacyAcl",
+        "kind": "method",
+        "line": 98,
+        "name": "ToStatus"
+      },
+      {
+        "class": "CatalogLegacyAcl",
+        "kind": "method",
+        "line": 70,
+        "name": "ToStockItem"
+      }
+    ]
+  },
+  {
+    "loc": 15,
+    "path": "services/catalog/CatalogService.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 10,
+        "name": "CatalogService"
+      },
+      {
+        "class": "CatalogService",
+        "kind": "method",
+        "line": 12,
+        "name": "GetProduct"
+      },
+      {
+        "class": "CatalogService",
+        "kind": "method",
+        "line": 15,
+        "name": "PriceOf"
+      }
+    ]
+  },
+  {
+    "loc": 13,
+    "path": "services/catalog/Controllers/CatalogController.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 9,
+        "name": "CatalogController"
+      },
+      {
+        "class": "CatalogController",
+        "kind": "method",
+        "line": 13,
+        "name": "Get"
+      }
+    ]
+  },
+  {
+    "loc": 10,
+    "path": "services/catalog/Domain/Category.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 6,
+        "name": "Category"
+      },
+      {
+        "class": "Category",
+        "kind": "field",
+        "line": 8,
+        "name": "Id"
+      },
+      {
+        "class": "Category",
+        "kind": "field",
+        "line": 9,
+        "name": "Name"
+      },
+      {
+        "class": "Category",
+        "kind": "field",
+        "line": 10,
+        "name": "Products"
+      }
+    ]
+  },
+  {
+    "loc": 12,
+    "path": "services/catalog/Domain/Product.cs",
+    "symbols": [
+      {
+        "class": "Product",
+        "kind": "field",
+        "line": 12,
+        "name": "Category"
+      },
+      {
+        "class": "Product",
+        "kind": "field",
+        "line": 11,
+        "name": "CategoryId"
+      },
+      {
+        "class": "Product",
+        "kind": "field",
+        "line": 8,
+        "name": "Id"
+      },
+      {
+        "class": "Product",
+        "kind": "field",
+        "line": 9,
+        "name": "Name"
+      },
+      {
+        "class": "Product",
+        "kind": "field",
+        "line": 10,
+        "name": "Price"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 6,
+        "name": "Product"
+      }
+    ]
+  },
+  {
+    "loc": 18,
+    "path": "services/catalog/Domain/StockItem.cs",
+    "symbols": [
+      {
+        "class": "StockItem",
+        "kind": "field",
+        "line": 15,
+        "name": "Id"
+      },
+      {
+        "class": "StockItem",
+        "kind": "field",
+        "line": 16,
+        "name": "ProductId"
+      },
+      {
+        "class": "StockItem",
+        "kind": "field",
+        "line": 17,
+        "name": "Quantity"
+      },
+      {
+        "class": "StockItem",
+        "kind": "field",
+        "line": 18,
+        "name": "Status"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 13,
+        "name": "StockItem"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 4,
+        "name": "StockStatus"
+      }
+    ]
+  },
+  {
+    "loc": 9,
+    "path": "services/catalog/Features/Category/CategoryEndpoints.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 7,
+        "name": "CategoryEndpoints"
+      },
+      {
+        "class": "CategoryEndpoints",
+        "kind": "method",
+        "line": 9,
+        "name": "MapCategoryEndpoints"
+      }
+    ]
+  },
+  {
+    "loc": 22,
+    "path": "services/catalog/Features/Category/CategoryHandler.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 8,
+        "name": "CategoryHandler"
+      },
+      {
+        "class": "CategoryHandler",
+        "kind": "method",
+        "line": 22,
+        "name": "CreateAsync"
+      },
+      {
+        "class": "CategoryHandler",
+        "kind": "method",
+        "line": 16,
+        "name": "GetAsync"
+      },
+      {
+        "class": "CategoryHandler",
+        "kind": "method",
+        "line": 10,
+        "name": "ListAsync"
+      }
+    ]
+  },
+  {
+    "loc": 10,
+    "path": "services/catalog/Features/Category/CategoryRequest.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 6,
+        "name": "CategoryResponse"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 4,
+        "name": "CreateCategoryRequest"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 8,
+        "name": "CreateCategoryRequestValidator"
+      }
+    ]
+  },
+  {
+    "loc": 9,
+    "path": "services/catalog/Features/Product/ProductEndpoints.cs",
+    "symbols": [
+      {
+        "class": "ProductEndpoints",
+        "kind": "method",
+        "line": 9,
+        "name": "MapProductEndpoints"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 7,
+        "name": "ProductEndpoints"
+      }
+    ]
+  },
+  {
+    "loc": 41,
+    "path": "services/catalog/Features/Product/ProductHandler.cs",
+    "symbols": [
+      {
+        "class": "ProductHandler",
+        "kind": "method",
+        "line": 41,
+        "name": "CreateAsync"
+      },
+      {
+        "class": "ProductHandler",
+        "kind": "method",
+        "line": 26,
+        "name": "GetAsync"
+      },
+      {
+        "class": "ProductHandler",
+        "kind": "method",
+        "line": 35,
+        "name": "GetPriceAsync"
+      },
+      {
+        "class": "ProductHandler",
+        "kind": "method",
+        "line": 11,
+        "name": "ListAsync"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 9,
+        "name": "ProductHandler"
+      }
+    ]
+  },
+  {
+    "loc": 12,
+    "path": "services/catalog/Features/Product/ProductRequest.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 4,
+        "name": "CreateProductRequest"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 10,
+        "name": "CreateProductRequestValidator"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 8,
+        "name": "ProductPriceResponse"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 6,
+        "name": "ProductResponse"
+      }
+    ]
+  },
+  {
+    "loc": 9,
+    "path": "services/catalog/Features/StockItem/StockItemEndpoints.cs",
+    "symbols": [
+      {
+        "class": "StockItemEndpoints",
+        "kind": "method",
+        "line": 9,
+        "name": "MapStockItemEndpoints"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 7,
+        "name": "StockItemEndpoints"
+      }
+    ]
+  },
+  {
+    "loc": 26,
+    "path": "services/catalog/Features/StockItem/StockItemHandler.cs",
+    "symbols": [
+      {
+        "class": "StockItemHandler",
+        "kind": "method",
+        "line": 19,
+        "name": "GetByProductAsync"
+      },
+      {
+        "class": "StockItemHandler",
+        "kind": "method",
+        "line": 26,
+        "name": "ReserveAsync"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 7,
+        "name": "ReserveOutcome"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 17,
+        "name": "StockItemHandler"
+      }
+    ]
+  },
+  {
+    "loc": 12,
+    "path": "services/catalog/Features/StockItem/StockItemRequest.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 6,
+        "name": "ReserveStockRequest"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 10,
+        "name": "ReserveStockRequestValidator"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 8,
+        "name": "StockItemResponse"
+      }
+    ]
+  },
+  {
+    "loc": 16,
+    "path": "services/catalog/Infrastructure/CatalogDbContext.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 10,
+        "name": "CatalogDbContext"
+      },
+      {
+        "class": "CatalogDbContext",
+        "kind": "field",
+        "line": 12,
+        "name": "Categories"
+      },
+      {
+        "class": "CatalogDbContext",
+        "kind": "method",
+        "line": 16,
+        "name": "OnModelCreating"
+      },
+      {
+        "class": "CatalogDbContext",
+        "kind": "field",
+        "line": 13,
+        "name": "Products"
+      },
+      {
+        "class": "CatalogDbContext",
+        "kind": "field",
+        "line": 14,
+        "name": "StockItems"
+      }
+    ]
+  },
+  {
+    "loc": 9,
+    "path": "services/catalog/Infrastructure/Configurations/CategoryConfiguration.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 7,
+        "name": "CategoryConfiguration"
+      },
+      {
+        "class": "CategoryConfiguration",
+        "kind": "method",
+        "line": 9,
+        "name": "Configure"
+      }
+    ]
+  },
+  {
+    "loc": 9,
+    "path": "services/catalog/Infrastructure/Configurations/ProductConfiguration.cs",
+    "symbols": [
+      {
+        "class": "ProductConfiguration",
+        "kind": "method",
+        "line": 9,
+        "name": "Configure"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 7,
+        "name": "ProductConfiguration"
+      }
+    ]
+  },
+  {
+    "loc": 9,
+    "path": "services/catalog/Infrastructure/Configurations/StockItemConfiguration.cs",
+    "symbols": [
+      {
+        "class": "StockItemConfiguration",
+        "kind": "method",
+        "line": 9,
+        "name": "Configure"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 7,
+        "name": "StockItemConfiguration"
+      }
+    ]
+  },
+  {
+    "loc": 78,
+    "path": "services/catalog/Program.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 78,
+        "name": "Program"
+      }
+    ]
+  },
+  {
+    "loc": 12,
+    "path": "services/customers.Tests/ArchitectureTests.cs",
+    "symbols": [
+      {
+        "class": "ArchitectureTests",
+        "kind": "method",
+        "line": 12,
+        "name": "Domain_has_no_dependency_on_Infrastructure_or_messaging"
+      },
+      {
+        "class": "ArchitectureTests",
+        "kind": "field",
+        "line": 10,
+        "name": "Service"
+      }
+    ]
+  },
+  {
+    "loc": 204,
+    "path": "services/customers.Tests/CustomerTests.cs",
+    "symbols": [
+      {
+        "class": "CustomerTests",
+        "kind": "method",
+        "line": 101,
+        "name": "Activity_probe_reports_the_current_state"
+      },
+      {
+        "class": "CustomersApp",
+        "kind": "field",
+        "line": 46,
+        "name": "Client"
+      },
+      {
+        "class": "CustomerTests",
+        "kind": "method",
+        "line": 134,
+        "name": "Concurrent_activation_flips_converge"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 75,
+        "name": "CustomerTests"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 16,
+        "name": "CustomersApp"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 64,
+        "name": "CustomersCollection"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 70,
+        "name": "CustomersJson"
+      },
+      {
+        "class": "CustomersApp",
+        "kind": "method",
+        "line": 53,
+        "name": "DisposeAsync"
+      },
+      {
+        "class": "CustomersApp",
+        "kind": "method",
+        "line": 23,
+        "name": "InitializeAsync"
+      },
+      {
+        "class": "CustomersCollection",
+        "kind": "field",
+        "line": 67,
+        "name": "Name"
+      },
+      {
+        "class": "CustomersApp",
+        "kind": "method",
+        "line": 48,
+        "name": "NewDbContext"
+      },
+      {
+        "class": "CustomerTests",
+        "kind": "method",
+        "line": 202,
+        "name": "NextEmail"
+      },
+      {
+        "class": "CustomerTests",
+        "kind": "method",
+        "line": 204,
+        "name": "Register"
+      },
+      {
+        "class": "CustomerTests",
+        "kind": "method",
+        "line": 80,
+        "name": "Register_then_get_round_trips_the_customer"
+      },
+      {
+        "class": "CustomerTests",
+        "kind": "method",
+        "line": 149,
+        "name": "Registering_a_duplicate_email_is_a_conflict"
+      },
+      {
+        "class": "CustomerTests",
+        "kind": "method",
+        "line": 165,
+        "name": "Registering_with_an_invalid_email_is_rejected"
+      },
+      {
+        "class": "CustomerTests",
+        "kind": "method",
+        "line": 178,
+        "name": "Registering_with_an_overlong_email_is_rejected"
+      },
+      {
+        "class": "CustomerTests",
+        "kind": "method",
+        "line": 118,
+        "name": "Setting_the_state_it_already_has_is_idempotent"
+      },
+      {
+        "class": "CustomersApp",
+        "kind": "field",
+        "line": 21,
+        "name": "Unavailable"
+      },
+      {
+        "class": "CustomerTests",
+        "kind": "method",
+        "line": 189,
+        "name": "Unknown_customer_is_not_found"
+      },
+      {
+        "class": "CustomersJson",
+        "kind": "field",
+        "line": 72,
+        "name": "Web"
+      },
+      {
+        "class": "CustomersApp",
+        "kind": "field",
+        "line": 18,
+        "name": "_db"
+      },
+      {
+        "class": "CustomersApp",
+        "kind": "field",
+        "line": 19,
+        "name": "_factory"
+      },
+      {
+        "class": "CustomerTests",
+        "kind": "field",
+        "line": 78,
+        "name": "_seq"
+      }
+    ]
+  },
+  {
+    "loc": 94,
+    "path": "services/customers.Tests/Equivalence/CustomersEquivalenceTests.cs",
+    "symbols": [
+      {
+        "class": "GoldenFixtures",
+        "kind": "method",
+        "line": 69,
+        "name": "All"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 15,
+        "name": "CustomersEquivalenceTests"
+      },
+      {
+        "class": "CustomersEquivalenceTests",
+        "kind": "method",
+        "line": 33,
+        "name": "DisposeAsync"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "method",
+        "line": 85,
+        "name": "ExpectedStatus"
+      },
+      {
+        "class": "CustomersEquivalenceTests",
+        "kind": "method",
+        "line": 41,
+        "name": "Goldens"
+      },
+      {
+        "class": "CustomersEquivalenceTests",
+        "kind": "method",
+        "line": 20,
+        "name": "InitializeAsync"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "method",
+        "line": 79,
+        "name": "Load"
+      },
+      {
+        "class": "CustomersEquivalenceTests",
+        "kind": "method",
+        "line": 43,
+        "name": "New_service_matches_the_legacy_golden"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "method",
+        "line": 94,
+        "name": "ProjectOnto"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "field",
+        "line": 65,
+        "name": "Volatile"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "field",
+        "line": 67,
+        "name": "Web"
+      },
+      {
+        "class": "CustomersEquivalenceTests",
+        "kind": "field",
+        "line": 17,
+        "name": "_replay"
+      },
+      {
+        "class": "CustomersEquivalenceTests",
+        "kind": "field",
+        "line": 18,
+        "name": "_unavailable"
+      }
+    ]
+  },
+  {
+    "loc": 15,
+    "path": "services/customers.Tests/HealthTests.cs",
+    "symbols": [
+      {
+        "class": "HealthTests",
+        "kind": "method",
+        "line": 15,
+        "name": "Health_endpoint_reports_healthy"
+      }
+    ]
+  },
+  {
+    "loc": 40,
+    "path": "services/customers.Tests/_support/GoldenReplay.cs",
+    "symbols": [
+      {
+        "class": "GoldenReplay",
+        "kind": "field",
+        "line": 28,
+        "name": "Client"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "method",
+        "line": 40,
+        "name": "DisposeAsync"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "method",
+        "line": 30,
+        "name": "Replay"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "method",
+        "line": 21,
+        "name": "StartAsync"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "field",
+        "line": 18,
+        "name": "_db"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "field",
+        "line": 19,
+        "name": "_factory"
+      }
+    ]
+  },
+  {
+    "loc": 21,
+    "path": "services/customers.Tests/_support/JsonNormalize.cs",
+    "symbols": [
+      {
+        "class": "JsonNormalize",
+        "kind": "method",
+        "line": 14,
+        "name": "Canonical"
+      },
+      {
+        "class": "JsonNormalize",
+        "kind": "field",
+        "line": 11,
+        "name": "DefaultVolatile"
+      },
+      {
+        "class": "JsonNormalize",
+        "kind": "method",
+        "line": 21,
+        "name": "Rewrite"
+      }
+    ]
+  },
+  {
+    "loc": 39,
+    "path": "services/customers.Tests/_support/SchemaGuard.cs",
+    "symbols": [
+      {
+        "class": "SchemaGuard",
+        "kind": "method",
+        "line": 13,
+        "name": "AssertResponseSatisfies"
+      },
+      {
+        "class": "SchemaGuard",
+        "kind": "method",
+        "line": 39,
+        "name": "KindCompatible"
+      },
+      {
+        "class": "SchemaGuard",
+        "kind": "method",
+        "line": 32,
+        "name": "TryGet"
+      }
+    ]
+  },
+  {
+    "loc": 70,
+    "path": "services/customers/Acl/CustomersLegacyAcl.cs",
+    "symbols": [
+      {
+        "class": "CustomersLegacyAcl",
+        "kind": "field",
+        "line": 16,
+        "name": "ActiveStatuses"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 14,
+        "name": "CustomersLegacyAcl"
+      },
+      {
+        "class": "CustomersLegacyAcl",
+        "kind": "field",
+        "line": 19,
+        "name": "InactiveStatuses"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 8,
+        "name": "LegacyCustomerRow"
+      },
+      {
+        "class": "CustomersLegacyAcl",
+        "kind": "method",
+        "line": 48,
+        "name": "ToActive"
+      },
+      {
+        "class": "CustomersLegacyAcl",
+        "kind": "method",
+        "line": 24,
+        "name": "ToDomain"
+      },
+      {
+        "class": "CustomersLegacyAcl",
+        "kind": "method",
+        "line": 70,
+        "name": "ToLegacy"
+      }
+    ]
+  },
+  {
+    "loc": 13,
+    "path": "services/customers/Controllers/CustomersController.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 9,
+        "name": "CustomersController"
+      },
+      {
+        "class": "CustomersController",
+        "kind": "method",
+        "line": 13,
+        "name": "Get"
+      }
+    ]
+  },
+  {
+    "loc": 15,
+    "path": "services/customers/CustomerService.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 10,
+        "name": "CustomerService"
+      },
+      {
+        "class": "CustomerService",
+        "kind": "method",
+        "line": 12,
+        "name": "Get"
+      },
+      {
+        "class": "CustomerService",
+        "kind": "method",
+        "line": 15,
+        "name": "IsActive"
+      }
+    ]
+  },
+  {
+    "loc": 10,
+    "path": "services/customers/Domain/Customer.cs",
+    "symbols": [
+      {
+        "class": "Customer",
+        "kind": "field",
+        "line": 10,
+        "name": "Active"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 6,
+        "name": "Customer"
+      },
+      {
+        "class": "Customer",
+        "kind": "field",
+        "line": 9,
+        "name": "Email"
+      },
+      {
+        "class": "Customer",
+        "kind": "field",
+        "line": 8,
+        "name": "Id"
+      }
+    ]
+  },
+  {
+    "loc": 9,
+    "path": "services/customers/Features/Customer/CustomerEndpoints.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 7,
+        "name": "CustomerEndpoints"
+      },
+      {
+        "class": "CustomerEndpoints",
+        "kind": "method",
+        "line": 9,
+        "name": "MapCustomer"
+      }
+    ]
+  },
+  {
+    "loc": 89,
+    "path": "services/customers/Features/Customer/CustomerHandler.cs",
+    "symbols": [
+      {
+        "class": "CustomerHandler",
+        "kind": "method",
+        "line": 43,
+        "name": "Create"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 19,
+        "name": "CustomerHandler"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 8,
+        "name": "CustomerWriteOutcome"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 15,
+        "name": "CustomerWriteResult"
+      },
+      {
+        "class": "CustomerHandler",
+        "kind": "method",
+        "line": 22,
+        "name": "Get"
+      },
+      {
+        "class": "CustomerHandler",
+        "kind": "method",
+        "line": 32,
+        "name": "IsActive"
+      },
+      {
+        "class": "CustomerHandler",
+        "kind": "method",
+        "line": 71,
+        "name": "SetActive"
+      },
+      {
+        "class": "CustomerHandler",
+        "kind": "method",
+        "line": 89,
+        "name": "ToResponse"
+      }
+    ]
+  },
+  {
+    "loc": 16,
+    "path": "services/customers/Features/Customer/CustomerRequest.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 5,
+        "name": "CreateCustomerRequest"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 14,
+        "name": "CreateCustomerRequestValidator"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 12,
+        "name": "CustomerResponse"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 8,
+        "name": "SetCustomerActiveRequest"
+      }
+    ]
+  },
+  {
+    "loc": 9,
+    "path": "services/customers/Infrastructure/Configurations/CustomerConfiguration.cs",
+    "symbols": [
+      {
+        "class": "CustomerConfiguration",
+        "kind": "method",
+        "line": 9,
+        "name": "Configure"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 7,
+        "name": "CustomerConfiguration"
+      }
+    ]
+  },
+  {
+    "loc": 14,
+    "path": "services/customers/Infrastructure/CustomersDbContext.cs",
+    "symbols": [
+      {
+        "class": "CustomersDbContext",
+        "kind": "field",
+        "line": 12,
+        "name": "Customers"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 10,
+        "name": "CustomersDbContext"
+      },
+      {
+        "class": "CustomersDbContext",
+        "kind": "method",
+        "line": 14,
+        "name": "OnModelCreating"
+      }
+    ]
+  },
+  {
+    "loc": 10,
+    "path": "services/inventory/Domain/StockItem.cs",
+    "symbols": [
+      {
+        "class": "StockItem",
+        "kind": "field",
+        "line": 8,
+        "name": "Id"
+      },
+      {
+        "class": "StockItem",
+        "kind": "field",
+        "line": 9,
+        "name": "ProductId"
+      },
+      {
+        "class": "StockItem",
+        "kind": "field",
+        "line": 10,
+        "name": "Quantity"
+      }
+    ]
+  },
+  {
+    "loc": 12,
+    "path": "services/inventory/Infrastructure/InventoryDbContext.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 10,
+        "name": "InventoryDbContext"
+      },
+      {
+        "class": "InventoryDbContext",
+        "kind": "field",
+        "line": 12,
+        "name": "StockItems"
+      }
+    ]
+  },
+  {
+    "loc": 12,
+    "path": "services/inventory/InventoryService.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 10,
+        "name": "InventoryService"
+      },
+      {
+        "class": "InventoryService",
+        "kind": "method",
+        "line": 12,
+        "name": "Reserve"
+      }
+    ]
+  },
+  {
+    "loc": 12,
+    "path": "services/orders.Tests/ArchitectureTests.cs",
+    "symbols": [
+      {
+        "class": "ArchitectureTests",
+        "kind": "method",
+        "line": 12,
+        "name": "Domain_has_no_dependency_on_Infrastructure_or_messaging"
+      },
+      {
+        "class": "ArchitectureTests",
+        "kind": "field",
+        "line": 10,
+        "name": "Service"
+      }
+    ]
+  },
+  {
+    "loc": 30,
+    "path": "services/orders.Tests/Contracts/CatalogContractTests.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 12,
+        "name": "CatalogContractTests"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 15,
+        "name": "CatalogProductReadModel"
+      },
+      {
+        "class": "CatalogContractTests",
+        "kind": "method",
+        "line": 17,
+        "name": "Fixtures"
+      },
+      {
+        "class": "CatalogContractTests",
+        "kind": "method",
+        "line": 30,
+        "name": "Provider_response_holds_the_value_invariants"
+      },
+      {
+        "class": "CatalogContractTests",
+        "kind": "method",
+        "line": 19,
+        "name": "Provider_response_satisfies_the_read_model"
+      }
+    ]
+  },
+  {
+    "loc": 15,
+    "path": "services/orders.Tests/Contracts/ContractBoundaries.cs",
+    "symbols": [
+      {
+        "class": "ContractBoundaries",
+        "kind": "field",
+        "line": 7,
+        "name": "All"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 5,
+        "name": "ContractBoundaries"
+      },
+      {
+        "class": "ContractBoundaries",
+        "kind": "method",
+        "line": 15,
+        "name": "Fixtures"
+      }
+    ]
+  },
+  {
+    "loc": 31,
+    "path": "services/orders.Tests/Contracts/CustomersContractTests.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 18,
+        "name": "CustomerReadModel"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 15,
+        "name": "CustomersContractTests"
+      },
+      {
+        "class": "CustomersContractTests",
+        "kind": "method",
+        "line": 20,
+        "name": "Fixtures"
+      },
+      {
+        "class": "CustomersContractTests",
+        "kind": "method",
+        "line": 31,
+        "name": "Provider_response_holds_the_value_invariants"
+      },
+      {
+        "class": "CustomersContractTests",
+        "kind": "method",
+        "line": 22,
+        "name": "Provider_response_satisfies_the_read_model"
+      }
+    ]
+  },
+  {
+    "loc": 63,
+    "path": "services/orders.Tests/Contracts/PaymentsContractTests.cs",
+    "symbols": [
+      {
+        "class": "PaymentsContractTests",
+        "kind": "method",
+        "line": 63,
+        "name": "A_recorded_charge_reports_as_charged"
+      },
+      {
+        "class": "PaymentsContractTests",
+        "kind": "method",
+        "line": 22,
+        "name": "Fixtures"
+      },
+      {
+        "class": "PaymentsContractTests",
+        "kind": "field",
+        "line": 20,
+        "name": "KnownStatuses"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 13,
+        "name": "PaymentsContractTests"
+      },
+      {
+        "class": "PaymentsContractTests",
+        "kind": "method",
+        "line": 33,
+        "name": "Provider_response_holds_the_value_invariants"
+      },
+      {
+        "class": "PaymentsContractTests",
+        "kind": "method",
+        "line": 24,
+        "name": "Provider_response_satisfies_the_read_model"
+      }
+    ]
+  },
+  {
+    "loc": 117,
+    "path": "services/orders.Tests/CreateOrderSagaTest.cs",
+    "symbols": [
+      {
+        "class": "CreateOrderSagaTest",
+        "kind": "method",
+        "line": 95,
+        "name": "A_failing_charge_turns_into_a_saga_failure"
+      },
+      {
+        "class": "CreateOrderSagaTest",
+        "kind": "method",
+        "line": 79,
+        "name": "Charging_the_payment_reports_the_payment_id"
+      },
+      {
+        "class": "CreateOrderSagaTest",
+        "kind": "field",
+        "line": 13,
+        "name": "Correlation"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 11,
+        "name": "CreateOrderSagaTest"
+      },
+      {
+        "class": "CreateOrderSagaTest",
+        "kind": "method",
+        "line": 64,
+        "name": "Failure_after_the_pivot_compensates_in_reverse"
+      },
+      {
+        "class": "CreateOrderSagaTest",
+        "kind": "method",
+        "line": 49,
+        "name": "Failure_before_the_pivot_compensates_stock_then_cancels"
+      },
+      {
+        "class": "CreateOrderSagaTest",
+        "kind": "method",
+        "line": 36,
+        "name": "Happy_path_completes_the_order_once_the_pivot_succeeds"
+      },
+      {
+        "class": "CreateOrderSagaTest",
+        "kind": "method",
+        "line": 107,
+        "name": "Refund_compensation_calls_payments"
+      },
+      {
+        "class": "CreateOrderSagaTest",
+        "kind": "method",
+        "line": 117,
+        "name": "Release_compensation_returns_every_reserved_line"
+      },
+      {
+        "class": "CreateOrderSagaTest",
+        "kind": "method",
+        "line": 22,
+        "name": "Saga_opens_holding_the_reservation_and_charges_last"
+      },
+      {
+        "class": "CreateOrderSagaTest",
+        "kind": "method",
+        "line": 15,
+        "name": "Started"
+      }
+    ]
+  },
+  {
+    "loc": 94,
+    "path": "services/orders.Tests/Equivalence/OrdersEquivalenceTests.cs",
+    "symbols": [
+      {
+        "class": "GoldenFixtures",
+        "kind": "method",
+        "line": 69,
+        "name": "All"
+      },
+      {
+        "class": "OrdersEquivalenceTests",
+        "kind": "method",
+        "line": 33,
+        "name": "DisposeAsync"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "method",
+        "line": 85,
+        "name": "ExpectedStatus"
+      },
+      {
+        "class": "OrdersEquivalenceTests",
+        "kind": "method",
+        "line": 41,
+        "name": "Goldens"
+      },
+      {
+        "class": "OrdersEquivalenceTests",
+        "kind": "method",
+        "line": 20,
+        "name": "InitializeAsync"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "method",
+        "line": 79,
+        "name": "Load"
+      },
+      {
+        "class": "OrdersEquivalenceTests",
+        "kind": "method",
+        "line": 43,
+        "name": "New_service_matches_the_legacy_golden"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 15,
+        "name": "OrdersEquivalenceTests"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "method",
+        "line": 94,
+        "name": "ProjectOnto"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "field",
+        "line": 65,
+        "name": "Volatile"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "field",
+        "line": 67,
+        "name": "Web"
+      },
+      {
+        "class": "OrdersEquivalenceTests",
+        "kind": "field",
+        "line": 17,
+        "name": "_replay"
+      },
+      {
+        "class": "OrdersEquivalenceTests",
+        "kind": "field",
+        "line": 18,
+        "name": "_unavailable"
+      }
+    ]
+  },
+  {
+    "loc": 15,
+    "path": "services/orders.Tests/HealthTests.cs",
+    "symbols": [
+      {
+        "class": "HealthTests",
+        "kind": "method",
+        "line": 15,
+        "name": "Health_endpoint_reports_healthy"
+      }
+    ]
+  },
+  {
+    "loc": 314,
+    "path": "services/orders.Tests/OrderTests.cs",
+    "symbols": [
+      {
+        "class": "OrderTests",
+        "kind": "method",
+        "line": 248,
+        "name": "A_partially_reserved_order_releases_what_it_took"
+      },
+      {
+        "class": "OrderTests",
+        "kind": "method",
+        "line": 204,
+        "name": "A_placed_order_is_retrievable"
+      },
+      {
+        "class": "FakeCustomersClient",
+        "kind": "field",
+        "line": 105,
+        "name": "Active"
+      },
+      {
+        "class": "OrderTests",
+        "kind": "method",
+        "line": 265,
+        "name": "An_inactive_customer_cannot_place_an_order"
+      },
+      {
+        "class": "OrderTests",
+        "kind": "method",
+        "line": 229,
+        "name": "An_order_that_cannot_be_stocked_is_a_conflict"
+      },
+      {
+        "class": "OrderTests",
+        "kind": "method",
+        "line": 295,
+        "name": "An_order_with_an_invalid_line_is_rejected"
+      },
+      {
+        "class": "OrderTests",
+        "kind": "method",
+        "line": 282,
+        "name": "An_order_with_no_lines_is_rejected"
+      },
+      {
+        "class": "OrdersApp",
+        "kind": "field",
+        "line": 33,
+        "name": "Catalog"
+      },
+      {
+        "class": "FakePaymentsClient",
+        "kind": "method",
+        "line": 142,
+        "name": "ChargeAsync"
+      },
+      {
+        "class": "FakePaymentsClient",
+        "kind": "field",
+        "line": 138,
+        "name": "Charges"
+      },
+      {
+        "class": "OrdersApp",
+        "kind": "field",
+        "line": 73,
+        "name": "Client"
+      },
+      {
+        "class": "OrdersApp",
+        "kind": "field",
+        "line": 32,
+        "name": "Customers"
+      },
+      {
+        "class": "OrdersApp",
+        "kind": "method",
+        "line": 92,
+        "name": "DisposeAsync"
+      },
+      {
+        "class": "FakePaymentsClient",
+        "kind": "field",
+        "line": 136,
+        "name": "Fail"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 110,
+        "name": "FakeCatalogClient"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 103,
+        "name": "FakeCustomersClient"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 117,
+        "name": "FakeInventoryClient"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 132,
+        "name": "FakePaymentsClient"
+      },
+      {
+        "class": "OrdersApp",
+        "kind": "method",
+        "line": 37,
+        "name": "InitializeAsync"
+      },
+      {
+        "class": "OrdersApp",
+        "kind": "field",
+        "line": 34,
+        "name": "Inventory"
+      },
+      {
+        "class": "FakeCustomersClient",
+        "kind": "method",
+        "line": 107,
+        "name": "IsActiveAsync"
+      },
+      {
+        "class": "OrdersCollection",
+        "kind": "field",
+        "line": 169,
+        "name": "Name"
+      },
+      {
+        "class": "OrdersApp",
+        "kind": "method",
+        "line": 75,
+        "name": "NewDbContext"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 177,
+        "name": "OrderTests"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 25,
+        "name": "OrdersApp"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 166,
+        "name": "OrdersCollection"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 172,
+        "name": "OrdersJson"
+      },
+      {
+        "class": "OrdersApp",
+        "kind": "field",
+        "line": 35,
+        "name": "Payments"
+      },
+      {
+        "class": "OrderTests",
+        "kind": "method",
+        "line": 180,
+        "name": "Placing_an_order_persists_it_with_priced_lines"
+      },
+      {
+        "class": "FakeCatalogClient",
+        "kind": "field",
+        "line": 112,
+        "name": "Price"
+      },
+      {
+        "class": "FakeCatalogClient",
+        "kind": "method",
+        "line": 114,
+        "name": "PriceOfAsync"
+      },
+      {
+        "class": "FakePaymentsClient",
+        "kind": "method",
+        "line": 159,
+        "name": "RefundAsync"
+      },
+      {
+        "class": "FakePaymentsClient",
+        "kind": "field",
+        "line": 140,
+        "name": "Refunded"
+      },
+      {
+        "class": "FakeInventoryClient",
+        "kind": "method",
+        "line": 125,
+        "name": "ReleaseAsync"
+      },
+      {
+        "class": "FakeInventoryClient",
+        "kind": "field",
+        "line": 121,
+        "name": "Released"
+      },
+      {
+        "class": "FakeInventoryClient",
+        "kind": "method",
+        "line": 123,
+        "name": "ReserveAsync"
+      },
+      {
+        "class": "FakeInventoryClient",
+        "kind": "field",
+        "line": 119,
+        "name": "Reserves"
+      },
+      {
+        "class": "OrdersApp",
+        "kind": "method",
+        "line": 81,
+        "name": "ResetParticipants"
+      },
+      {
+        "class": "OrdersApp",
+        "kind": "field",
+        "line": 30,
+        "name": "Unavailable"
+      },
+      {
+        "class": "OrderTests",
+        "kind": "method",
+        "line": 314,
+        "name": "Unknown_order_is_not_found"
+      },
+      {
+        "class": "OrdersJson",
+        "kind": "field",
+        "line": 174,
+        "name": "Web"
+      },
+      {
+        "class": "OrdersApp",
+        "kind": "field",
+        "line": 27,
+        "name": "_db"
+      },
+      {
+        "class": "OrdersApp",
+        "kind": "field",
+        "line": 28,
+        "name": "_factory"
+      },
+      {
+        "class": "FakePaymentsClient",
+        "kind": "field",
+        "line": 134,
+        "name": "_nextId"
+      }
+    ]
+  },
+  {
+    "loc": 40,
+    "path": "services/orders.Tests/_support/GoldenReplay.cs",
+    "symbols": [
+      {
+        "class": "GoldenReplay",
+        "kind": "field",
+        "line": 28,
+        "name": "Client"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "method",
+        "line": 40,
+        "name": "DisposeAsync"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "method",
+        "line": 30,
+        "name": "Replay"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "method",
+        "line": 21,
+        "name": "StartAsync"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "field",
+        "line": 18,
+        "name": "_db"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "field",
+        "line": 19,
+        "name": "_factory"
+      }
+    ]
+  },
+  {
+    "loc": 21,
+    "path": "services/orders.Tests/_support/JsonNormalize.cs",
+    "symbols": [
+      {
+        "class": "JsonNormalize",
+        "kind": "method",
+        "line": 14,
+        "name": "Canonical"
+      },
+      {
+        "class": "JsonNormalize",
+        "kind": "field",
+        "line": 11,
+        "name": "DefaultVolatile"
+      },
+      {
+        "class": "JsonNormalize",
+        "kind": "method",
+        "line": 21,
+        "name": "Rewrite"
+      }
+    ]
+  },
+  {
+    "loc": 39,
+    "path": "services/orders.Tests/_support/SchemaGuard.cs",
+    "symbols": [
+      {
+        "class": "SchemaGuard",
+        "kind": "method",
+        "line": 13,
+        "name": "AssertResponseSatisfies"
+      },
+      {
+        "class": "SchemaGuard",
+        "kind": "method",
+        "line": 39,
+        "name": "KindCompatible"
+      },
+      {
+        "class": "SchemaGuard",
+        "kind": "method",
+        "line": 32,
+        "name": "TryGet"
+      }
+    ]
+  },
+  {
+    "loc": 73,
+    "path": "services/orders/Acl/OrdersLegacyAcl.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 21,
+        "name": "LegacyOrderLineRow"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 14,
+        "name": "LegacyOrderRow"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 29,
+        "name": "OrdersLegacyAcl"
+      },
+      {
+        "class": "OrdersLegacyAcl",
+        "kind": "method",
+        "line": 31,
+        "name": "ToDomain"
+      },
+      {
+        "class": "OrdersLegacyAcl",
+        "kind": "method",
+        "line": 73,
+        "name": "ToStatus"
+      }
+    ]
+  },
+  {
+    "loc": 28,
+    "path": "services/orders/Clients/CatalogClient.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 14,
+        "name": "CatalogClient"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 28,
+        "name": "CatalogProductResponse"
+      },
+      {
+        "class": null,
+        "kind": "interface",
+        "line": 9,
+        "name": "ICatalogClient"
+      },
+      {
+        "class": "ICatalogClient",
+        "kind": "method",
+        "line": 11,
+        "name": "PriceOfAsync"
+      },
+      {
+        "class": "CatalogClient",
+        "kind": "field",
+        "line": 16,
+        "name": "_http"
+      }
+    ]
+  },
+  {
+    "loc": 21,
+    "path": "services/orders/Clients/CustomersClient.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 15,
+        "name": "CustomersClient"
+      },
+      {
+        "class": null,
+        "kind": "interface",
+        "line": 10,
+        "name": "ICustomersClient"
+      },
+      {
+        "class": "ICustomersClient",
+        "kind": "method",
+        "line": 12,
+        "name": "IsActiveAsync"
+      },
+      {
+        "class": "CustomersClient",
+        "kind": "field",
+        "line": 17,
+        "name": "_http"
+      }
+    ]
+  },
+  {
+    "loc": 45,
+    "path": "services/orders/Clients/InventoryClient.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "interface",
+        "line": 10,
+        "name": "IInventoryClient"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 18,
+        "name": "InventoryClient"
+      },
+      {
+        "class": "IInventoryClient",
+        "kind": "method",
+        "line": 15,
+        "name": "ReleaseAsync"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 44,
+        "name": "ReservationRequest"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 45,
+        "name": "ReservationResponse"
+      },
+      {
+        "class": "IInventoryClient",
+        "kind": "method",
+        "line": 12,
+        "name": "ReserveAsync"
+      },
+      {
+        "class": "InventoryClient",
+        "kind": "field",
+        "line": 20,
+        "name": "_http"
+      }
+    ]
+  },
+  {
+    "loc": 40,
+    "path": "services/orders/Clients/PaymentsClient.cs",
+    "symbols": [
+      {
+        "class": "IPaymentsClient",
+        "kind": "method",
+        "line": 12,
+        "name": "ChargeAsync"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 40,
+        "name": "ChargeRequest"
+      },
+      {
+        "class": null,
+        "kind": "interface",
+        "line": 10,
+        "name": "IPaymentsClient"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 18,
+        "name": "PaymentsClient"
+      },
+      {
+        "class": "IPaymentsClient",
+        "kind": "method",
+        "line": 15,
+        "name": "RefundAsync"
+      },
+      {
+        "class": "PaymentsClient",
+        "kind": "field",
+        "line": 20,
+        "name": "_http"
+      }
+    ]
+  },
+  {
+    "loc": 12,
+    "path": "services/orders/Contracts/Payment.cs",
+    "symbols": [
+      {
+        "class": "Payment",
+        "kind": "field",
+        "line": 11,
+        "name": "Amount"
+      },
+      {
+        "class": "Payment",
+        "kind": "field",
+        "line": 9,
+        "name": "Id"
+      },
+      {
+        "class": "Payment",
+        "kind": "field",
+        "line": 10,
+        "name": "OrderId"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 7,
+        "name": "Payment"
+      },
+      {
+        "class": "Payment",
+        "kind": "field",
+        "line": 12,
+        "name": "Status"
+      }
+    ]
+  },
+  {
+    "loc": 16,
+    "path": "services/orders/Controllers/OrdersController.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 14,
+        "name": "LineDto"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 9,
+        "name": "OrdersController"
+      },
+      {
+        "class": "OrdersController",
+        "kind": "method",
+        "line": 16,
+        "name": "Place"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 13,
+        "name": "PlaceOrderRequest"
+      }
+    ]
+  },
+  {
+    "loc": 12,
+    "path": "services/orders/Domain/Order.cs",
+    "symbols": [
+      {
+        "class": "Order",
+        "kind": "field",
+        "line": 9,
+        "name": "CustomerId"
+      },
+      {
+        "class": "Order",
+        "kind": "field",
+        "line": 8,
+        "name": "Id"
+      },
+      {
+        "class": "Order",
+        "kind": "field",
+        "line": 12,
+        "name": "Lines"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 6,
+        "name": "Order"
+      },
+      {
+        "class": "Order",
+        "kind": "field",
+        "line": 10,
+        "name": "Status"
+      },
+      {
+        "class": "Order",
+        "kind": "field",
+        "line": 11,
+        "name": "Total"
+      }
+    ]
+  },
+  {
+    "loc": 12,
+    "path": "services/orders/Domain/OrderLine.cs",
+    "symbols": [
+      {
+        "class": "OrderLine",
+        "kind": "field",
+        "line": 8,
+        "name": "Id"
+      },
+      {
+        "class": "OrderLine",
+        "kind": "field",
+        "line": 9,
+        "name": "OrderId"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 6,
+        "name": "OrderLine"
+      },
+      {
+        "class": "OrderLine",
+        "kind": "field",
+        "line": 10,
+        "name": "ProductId"
+      },
+      {
+        "class": "OrderLine",
+        "kind": "field",
+        "line": 11,
+        "name": "Quantity"
+      },
+      {
+        "class": "OrderLine",
+        "kind": "field",
+        "line": 12,
+        "name": "UnitPrice"
+      }
+    ]
+  },
+  {
+    "loc": 27,
+    "path": "services/orders/Features/CreateOrder/CreateOrderMessages.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 27,
+        "name": "CancelOrder"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 22,
+        "name": "CreateOrderFailed"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 10,
+        "name": "CreateOrderStarted"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 19,
+        "name": "OrderPlaced"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 18,
+        "name": "PaymentCharged"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 25,
+        "name": "RefundPayment"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 26,
+        "name": "ReleaseStock"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 6,
+        "name": "ReservedLine"
+      }
+    ]
+  },
+  {
+    "loc": 118,
+    "path": "services/orders/Features/CreateOrder/CreateOrderSaga.cs",
+    "symbols": [
+      {
+        "class": "OrderStatuses",
+        "kind": "field",
+        "line": 118,
+        "name": "Cancelled"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 64,
+        "name": "ChargePayment"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 13,
+        "name": "CreateOrderSaga"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 68,
+        "name": "CreateOrderStepHandlers"
+      },
+      {
+        "class": "CreateOrderSaga",
+        "kind": "method",
+        "line": 41,
+        "name": "Handle"
+      },
+      {
+        "class": "CreateOrderSaga",
+        "kind": "field",
+        "line": 15,
+        "name": "Id"
+      },
+      {
+        "class": "CreateOrderSaga",
+        "kind": "field",
+        "line": 19,
+        "name": "Lines"
+      },
+      {
+        "class": "CreateOrderSaga",
+        "kind": "field",
+        "line": 17,
+        "name": "OrderId"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 114,
+        "name": "OrderStatuses"
+      },
+      {
+        "class": "CreateOrderSaga",
+        "kind": "field",
+        "line": 21,
+        "name": "PaymentId"
+      },
+      {
+        "class": "OrderStatuses",
+        "kind": "field",
+        "line": 116,
+        "name": "Pending"
+      },
+      {
+        "class": "OrderStatuses",
+        "kind": "field",
+        "line": 117,
+        "name": "Placed"
+      },
+      {
+        "class": "CreateOrderSaga",
+        "kind": "method",
+        "line": 26,
+        "name": "Start"
+      },
+      {
+        "class": "CreateOrderSaga",
+        "kind": "field",
+        "line": 20,
+        "name": "StockReserved"
+      },
+      {
+        "class": "CreateOrderSaga",
+        "kind": "field",
+        "line": 18,
+        "name": "Total"
+      }
+    ]
+  },
+  {
+    "loc": 9,
+    "path": "services/orders/Features/Order/OrderEndpoints.cs",
+    "symbols": [
+      {
+        "class": "OrderEndpoints",
+        "kind": "method",
+        "line": 9,
+        "name": "MapOrderEndpoints"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 7,
+        "name": "OrderEndpoints"
+      }
+    ]
+  },
+  {
+    "loc": 40,
+    "path": "services/orders/Features/Order/OrderHandler.cs",
+    "symbols": [
+      {
+        "class": "OrderHandler",
+        "kind": "method",
+        "line": 23,
+        "name": "GetAsync"
+      },
+      {
+        "class": "OrderHandler",
+        "kind": "method",
+        "line": 40,
+        "name": "MapStatus"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 12,
+        "name": "OrderHandler"
+      },
+      {
+        "class": "OrderHandler",
+        "kind": "method",
+        "line": 14,
+        "name": "PlaceAsync"
+      },
+      {
+        "class": "OrderHandler",
+        "kind": "method",
+        "line": 33,
+        "name": "ToResponse"
+      }
+    ]
+  },
+  {
+    "loc": 38,
+    "path": "services/orders/Features/Order/OrderRequest.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 6,
+        "name": "OrderLineRequest"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 36,
+        "name": "OrderLineRequestValidator"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 24,
+        "name": "OrderLineResponse"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 17,
+        "name": "OrderResponse"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 9,
+        "name": "OrderStatus"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 26,
+        "name": "PlaceOrderRequestValidator"
+      }
+    ]
+  },
+  {
+    "loc": 9,
+    "path": "services/orders/Infrastructure/Configurations/OrderConfiguration.cs",
+    "symbols": [
+      {
+        "class": "OrderConfiguration",
+        "kind": "method",
+        "line": 9,
+        "name": "Configure"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 7,
+        "name": "OrderConfiguration"
+      }
+    ]
+  },
+  {
+    "loc": 9,
+    "path": "services/orders/Infrastructure/Configurations/OrderLineConfiguration.cs",
+    "symbols": [
+      {
+        "class": "OrderLineConfiguration",
+        "kind": "method",
+        "line": 9,
+        "name": "Configure"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 7,
+        "name": "OrderLineConfiguration"
+      }
+    ]
+  },
+  {
+    "loc": 13,
+    "path": "services/orders/Infrastructure/OrdersDbContext.cs",
+    "symbols": [
+      {
+        "class": "OrdersDbContext",
+        "kind": "field",
+        "line": 13,
+        "name": "OrderLines"
+      },
+      {
+        "class": "OrdersDbContext",
+        "kind": "field",
+        "line": 12,
+        "name": "Orders"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 10,
+        "name": "OrdersDbContext"
+      }
+    ]
+  },
+  {
+    "loc": 74,
+    "path": "services/orders/OrderService.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 14,
+        "name": "OrderRejectedException"
+      },
+      {
+        "class": "OrderRejectedException",
+        "kind": "method",
+        "line": 23,
+        "name": "PlaceOrder"
+      },
+      {
+        "class": "OrderRejectedException",
+        "kind": "method",
+        "line": 74,
+        "name": "ReleaseAsync"
+      }
+    ]
+  },
+  {
+    "loc": 12,
+    "path": "services/payments.Tests/ArchitectureTests.cs",
+    "symbols": [
+      {
+        "class": "ArchitectureTests",
+        "kind": "method",
+        "line": 12,
+        "name": "Domain_has_no_dependency_on_Infrastructure_or_messaging"
+      },
+      {
+        "class": "ArchitectureTests",
+        "kind": "field",
+        "line": 10,
+        "name": "Service"
+      }
+    ]
+  },
+  {
+    "loc": 94,
+    "path": "services/payments.Tests/Equivalence/PaymentsEquivalenceTests.cs",
+    "symbols": [
+      {
+        "class": "GoldenFixtures",
+        "kind": "method",
+        "line": 69,
+        "name": "All"
+      },
+      {
+        "class": "PaymentsEquivalenceTests",
+        "kind": "method",
+        "line": 33,
+        "name": "DisposeAsync"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "method",
+        "line": 85,
+        "name": "ExpectedStatus"
+      },
+      {
+        "class": "PaymentsEquivalenceTests",
+        "kind": "method",
+        "line": 41,
+        "name": "Goldens"
+      },
+      {
+        "class": "PaymentsEquivalenceTests",
+        "kind": "method",
+        "line": 20,
+        "name": "InitializeAsync"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "method",
+        "line": 79,
+        "name": "Load"
+      },
+      {
+        "class": "PaymentsEquivalenceTests",
+        "kind": "method",
+        "line": 43,
+        "name": "New_service_matches_the_legacy_golden"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 15,
+        "name": "PaymentsEquivalenceTests"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "method",
+        "line": 94,
+        "name": "ProjectOnto"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "field",
+        "line": 65,
+        "name": "Volatile"
+      },
+      {
+        "class": "GoldenFixtures",
+        "kind": "field",
+        "line": 67,
+        "name": "Web"
+      },
+      {
+        "class": "PaymentsEquivalenceTests",
+        "kind": "field",
+        "line": 17,
+        "name": "_replay"
+      },
+      {
+        "class": "PaymentsEquivalenceTests",
+        "kind": "field",
+        "line": 18,
+        "name": "_unavailable"
+      }
+    ]
+  },
+  {
+    "loc": 15,
+    "path": "services/payments.Tests/HealthTests.cs",
+    "symbols": [
+      {
+        "class": "HealthTests",
+        "kind": "method",
+        "line": 15,
+        "name": "Health_endpoint_reports_healthy"
+      }
+    ]
+  },
+  {
+    "loc": 166,
+    "path": "services/payments.Tests/PaymentTests.cs",
+    "symbols": [
+      {
+        "class": "PaymentTests",
+        "kind": "method",
+        "line": 82,
+        "name": "Charge_records_the_payment_and_returns_it"
+      },
+      {
+        "class": "PaymentTests",
+        "kind": "method",
+        "line": 142,
+        "name": "Charge_with_an_invalid_request_is_rejected"
+      },
+      {
+        "class": "PaymentTests",
+        "kind": "method",
+        "line": 122,
+        "name": "Charging_the_same_order_twice_is_a_conflict"
+      },
+      {
+        "class": "PaymentsApp",
+        "kind": "field",
+        "line": 47,
+        "name": "Client"
+      },
+      {
+        "class": "PaymentsApp",
+        "kind": "method",
+        "line": 54,
+        "name": "DisposeAsync"
+      },
+      {
+        "class": "PaymentsApp",
+        "kind": "method",
+        "line": 24,
+        "name": "InitializeAsync"
+      },
+      {
+        "class": "PaymentsCollection",
+        "kind": "field",
+        "line": 68,
+        "name": "Name"
+      },
+      {
+        "class": "PaymentsApp",
+        "kind": "method",
+        "line": 49,
+        "name": "NewDbContext"
+      },
+      {
+        "class": "PaymentTests",
+        "kind": "method",
+        "line": 166,
+        "name": "NextOrderId"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 76,
+        "name": "PaymentTests"
+      },
+      {
+        "class": "PaymentTests",
+        "kind": "method",
+        "line": 105,
+        "name": "Payment_is_addressable_by_its_order"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 17,
+        "name": "PaymentsApp"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 65,
+        "name": "PaymentsCollection"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 71,
+        "name": "PaymentsJson"
+      },
+      {
+        "class": "PaymentsApp",
+        "kind": "field",
+        "line": 22,
+        "name": "Unavailable"
+      },
+      {
+        "class": "PaymentTests",
+        "kind": "method",
+        "line": 156,
+        "name": "Unknown_payment_is_not_found"
+      },
+      {
+        "class": "PaymentsJson",
+        "kind": "field",
+        "line": 73,
+        "name": "Web"
+      },
+      {
+        "class": "PaymentsApp",
+        "kind": "field",
+        "line": 19,
+        "name": "_db"
+      },
+      {
+        "class": "PaymentsApp",
+        "kind": "field",
+        "line": 20,
+        "name": "_factory"
+      },
+      {
+        "class": "PaymentTests",
+        "kind": "field",
+        "line": 80,
+        "name": "_nextOrderId"
+      }
+    ]
+  },
+  {
+    "loc": 40,
+    "path": "services/payments.Tests/_support/GoldenReplay.cs",
+    "symbols": [
+      {
+        "class": "GoldenReplay",
+        "kind": "field",
+        "line": 28,
+        "name": "Client"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "method",
+        "line": 40,
+        "name": "DisposeAsync"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "method",
+        "line": 30,
+        "name": "Replay"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "method",
+        "line": 21,
+        "name": "StartAsync"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "field",
+        "line": 18,
+        "name": "_db"
+      },
+      {
+        "class": "GoldenReplay",
+        "kind": "field",
+        "line": 19,
+        "name": "_factory"
+      }
+    ]
+  },
+  {
+    "loc": 21,
+    "path": "services/payments.Tests/_support/JsonNormalize.cs",
+    "symbols": [
+      {
+        "class": "JsonNormalize",
+        "kind": "method",
+        "line": 14,
+        "name": "Canonical"
+      },
+      {
+        "class": "JsonNormalize",
+        "kind": "field",
+        "line": 11,
+        "name": "DefaultVolatile"
+      },
+      {
+        "class": "JsonNormalize",
+        "kind": "method",
+        "line": 21,
+        "name": "Rewrite"
+      }
+    ]
+  },
+  {
+    "loc": 39,
+    "path": "services/payments.Tests/_support/SchemaGuard.cs",
+    "symbols": [
+      {
+        "class": "SchemaGuard",
+        "kind": "method",
+        "line": 13,
+        "name": "AssertResponseSatisfies"
+      },
+      {
+        "class": "SchemaGuard",
+        "kind": "method",
+        "line": 39,
+        "name": "KindCompatible"
+      },
+      {
+        "class": "SchemaGuard",
+        "kind": "method",
+        "line": 32,
+        "name": "TryGet"
+      }
+    ]
+  },
+  {
+    "loc": 76,
+    "path": "services/payments/Acl/PaymentsLegacyAcl.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 18,
+        "name": "LegacyPaymentRow"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 8,
+        "name": "PaymentStatus"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 21,
+        "name": "PaymentsLegacyAcl"
+      },
+      {
+        "class": "PaymentsLegacyAcl",
+        "kind": "method",
+        "line": 76,
+        "name": "StatusOf"
+      },
+      {
+        "class": "PaymentsLegacyAcl",
+        "kind": "method",
+        "line": 48,
+        "name": "ToDomain"
+      },
+      {
+        "class": "PaymentsLegacyAcl",
+        "kind": "method",
+        "line": 37,
+        "name": "ToLegacyStatus"
+      },
+      {
+        "class": "PaymentsLegacyAcl",
+        "kind": "method",
+        "line": 25,
+        "name": "ToStatus"
+      }
+    ]
+  },
+  {
+    "loc": 11,
+    "path": "services/payments/Domain/Payment.cs",
+    "symbols": [
+      {
+        "class": "Payment",
+        "kind": "field",
+        "line": 10,
+        "name": "Amount"
+      },
+      {
+        "class": "Payment",
+        "kind": "field",
+        "line": 8,
+        "name": "Id"
+      },
+      {
+        "class": "Payment",
+        "kind": "field",
+        "line": 9,
+        "name": "OrderId"
+      },
+      {
+        "class": "Payment",
+        "kind": "field",
+        "line": 11,
+        "name": "Status"
+      }
+    ]
+  },
+  {
+    "loc": 9,
+    "path": "services/payments/Features/Payment/PaymentEndpoints.cs",
+    "symbols": [
+      {
+        "class": "PaymentEndpoints",
+        "kind": "method",
+        "line": 9,
+        "name": "MapPayment"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 7,
+        "name": "PaymentEndpoints"
+      }
+    ]
+  },
+  {
+    "loc": 76,
+    "path": "services/payments/Features/Payment/PaymentHandler.cs",
+    "symbols": [
+      {
+        "class": "PaymentHandler",
+        "kind": "method",
+        "line": 23,
+        "name": "ChargeAsync"
+      },
+      {
+        "class": "PaymentHandler",
+        "kind": "method",
+        "line": 62,
+        "name": "GetAsync"
+      },
+      {
+        "class": "PaymentHandler",
+        "kind": "method",
+        "line": 68,
+        "name": "GetByOrderAsync"
+      },
+      {
+        "class": "PaymentAlreadyExistsException",
+        "kind": "field",
+        "line": 16,
+        "name": "OrderId"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 13,
+        "name": "PaymentAlreadyExistsException"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 21,
+        "name": "PaymentHandler"
+      },
+      {
+        "class": "PaymentHandler",
+        "kind": "method",
+        "line": 76,
+        "name": "ToResponse"
+      }
+    ]
+  },
+  {
+    "loc": 13,
+    "path": "services/payments/Features/Payment/PaymentRequest.cs",
+    "symbols": [
+      {
+        "class": null,
+        "kind": "class",
+        "line": 7,
+        "name": "ChargePaymentRequest"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 11,
+        "name": "ChargePaymentRequestValidator"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 9,
+        "name": "PaymentResponse"
+      }
+    ]
+  },
+  {
+    "loc": 9,
+    "path": "services/payments/Infrastructure/Configurations/PaymentConfiguration.cs",
+    "symbols": [
+      {
+        "class": "PaymentConfiguration",
+        "kind": "method",
+        "line": 9,
+        "name": "Configure"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 7,
+        "name": "PaymentConfiguration"
+      }
+    ]
+  },
+  {
+    "loc": 12,
+    "path": "services/payments/Infrastructure/PaymentsDbContext.cs",
+    "symbols": [
+      {
+        "class": "PaymentsDbContext",
+        "kind": "field",
+        "line": 12,
+        "name": "Payments"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 10,
+        "name": "PaymentsDbContext"
+      }
+    ]
+  },
+  {
+    "loc": 11,
+    "path": "services/payments/PaymentService.cs",
+    "symbols": [
+      {
+        "class": "PaymentService",
+        "kind": "method",
+        "line": 11,
+        "name": "Charge"
+      },
+      {
+        "class": null,
+        "kind": "class",
+        "line": 9,
+        "name": "PaymentService"
+      }
+    ]
+  }
+]
